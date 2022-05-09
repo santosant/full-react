@@ -1,5 +1,5 @@
 import './App.css';
-import ExpenseItem from './components/ExpenseItem';
+import Expenses from './components/Expenses';
 
 function App() {
   const expenses = [
@@ -8,30 +8,7 @@ function App() {
     { date: new Date(2022, 4, 6), title: 'Mobile', amount: 67.0 },
     { date: new Date(2022, 4, 5), title: 'House Rend', amount: 400.0 },
   ];
-  return (
-    <>
-      <ExpenseItem
-        title={expenses[0].title}
-        date={expenses[0].date}
-        amount={expenses[0].amount}
-      />
-      <ExpenseItem
-        title={expenses[1].title}
-        date={expenses[1].date}
-        amount={expenses[1].amount}
-      />
-      <ExpenseItem
-        title={expenses[2].title}
-        date={expenses[2].date}
-        amount={expenses[2].amount}
-      />
-      <ExpenseItem
-        title={expenses[3].title}
-        date={expenses[3].date}
-        amount={expenses[3].amount}
-      />
-    </>
-  );
+  return <Expenses items={expenses} />;
 }
 
 export default App;
